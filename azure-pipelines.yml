@@ -38,7 +38,8 @@ steps:
   inputs:
     version: '6.0.x'
 
-- task: PublishPipelineArtifact@1
+
+- task: PublishBuildArtifacts@1
   inputs:
-    targetPath: $(System.DefaultWorkingDirectory)/bin/WebApp
-    artifactName: WebApp
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: drop
