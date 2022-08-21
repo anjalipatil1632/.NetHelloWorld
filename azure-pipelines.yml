@@ -38,7 +38,6 @@ steps:
   inputs:
     version: '6.0.x'
 
-
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
